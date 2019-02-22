@@ -23,8 +23,15 @@ const cloneReferencedElement = require('react-clone-referenced-element');
 const createReactClass = require('create-react-class');
 const isEmpty = require('isEmpty');
 const merge = require('merge');
+const warnOnce = require('warnOnce');
 
 import type {Props as ScrollViewProps} from 'ScrollView';
+
+warnOnce(
+  'listview-deprecation',
+  'ListView is deprecated and will be removed in a future release. ' +
+    'See https://fb.me/nolistview for more information',
+);
 
 const DEFAULT_PAGE_SIZE = 1;
 const DEFAULT_INITIAL_ROWS = 10;

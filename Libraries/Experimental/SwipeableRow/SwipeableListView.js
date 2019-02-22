@@ -15,6 +15,14 @@ const React = require('React');
 const SwipeableListViewDataSource = require('SwipeableListViewDataSource');
 const SwipeableRow = require('SwipeableRow');
 
+const warnOnce = require('warnOnce');
+
+warnOnce(
+  'swipablelistview-deprecation',
+  'ListView and SwipeableListView are deprecated and will be removed in a future release. ' +
+    'See https://fb.me/nolistview for more information',
+);
+
 type ListViewProps = React.ElementConfig<typeof ListView>;
 
 type Props = $ReadOnly<{|
